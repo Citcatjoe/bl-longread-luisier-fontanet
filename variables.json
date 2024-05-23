@@ -1,0 +1,27 @@
+{
+	"title": "Au sommet du pouvoir, Nathalie Fontanet et Christelle Luisier se confient",
+	"titlesocial": "Au sommet du pouvoir, Nathalie Fontanet et Christelle Luisier se confient",
+	"description": "Leaders des gouvernements vaudois et genevois, les PLR Christelle Luisier et Nathalie Fontanet se retrouvent à l'EPFL",
+	"authors": {
+		"photos": "Valentin Flauraud et Keystone",
+		"videos": null,
+		"writer": {
+			"fname": "Amit",
+			"lname": "Juillard",
+			"title": "Journaliste Blick",
+			"filetype": "png",
+			"url": "https://www.blick.ch/fr/auteurs/amit-juillard-journaliste-blick-id16519941.html"
+		},
+		"dev": "César Greppin"
+	},
+	"imgSocial": "social.jpg",
+	"headertheme": "neg", 
+	"blickWhite": true,
+	"blickBlack": false,
+	"headerBoxed": false,
+	"pubDate": "2020-07-23T11:00:00+00:00",
+	"partner": {
+		"logo": "img/empty.png",
+		"link": "https://www.blick.ch/"
+	}
+}

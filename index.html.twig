@@ -1,0 +1,606 @@
+{# Looking fot these files in given path #}
+{% use '_metas-and-scripts.html.twig' %}
+{% use '_header-and-share.html.twig' %}
+{% use '_html-elements.html.twig' %}
+
+<!DOCTYPE HTML>
+
+<html lang="fr" class="h-full relative"> 
+	<head>
+		{{ block('consent') }}
+
+		<script src="https://cdn.tailwindcss.com"></script>  
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+		<!-- <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet"> -->
+		<!-- <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@600&display=swap" rel="stylesheet"> -->
+		<!-- <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;600&display=swap" rel="stylesheet">  -->
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<!-- <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">  -->
+		<!-- <link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.css" rel="stylesheet"> -->
+
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/main.css">
+		<!-- <link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet" /> -->
+
+		{# <?php include 'hb_card_tp.php'; ?> #}
+		{{ block('head_brand') }}
+		
+	</head>
+	<!-- OneTrust Cookies Consent Notice start for blick.ch -->
+	<!-- <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="d57e5842-f42f-46bc-a4ea-4a82bd82322c" ></script>
+	<script type="text/javascript">
+	function OptanonWrapper() { } 
+	</script> -->
+	<!-- OneTrust Cookies Consent Notice end for blick.ch --> 
+	{# {{ block('frame') }} #}
+	<body class="bg-white h-full"> 
+		<div class="wrapper bg-slate-100">
+		<!-- {{ block('loading_overlay') }} -->
+		{{ block('gtm') }}
+		
+		{{ block('header') }}
+		{{ block('menu_overlay') }}
+		
+		
+
+		
+		{# <div class="hero bg-custom-color overflow-hidden">
+
+			<div class="container max-w-2xl pt-24 relative z-10">
+				<!-- TITRE -->
+				<div class="w-full text-center px-4 md:px-0">
+					<h1 class="inline-block uppercase text-gradient font-semibold mb-4 md:mb-12 pb-4 md:pb-8 relative">
+						Suisse - UE: tout comprendre sur les 5 points qui vont mettre nos nerfs à vif
+						<span class="w-full h-1 bg-black absolute bottom-0 left-1/2 -translate-x-1/2 hidden md:block"></span>
+					</h1>
+				</div>
+			</div>
+
+				<!-- GANTS -->
+				<!-- <div class="opening -mx-4 md:-mx-96 md:mb-8"> -->
+			<div class="aspect-custom relative opening">
+				<img src="img/this/opening-left.png" alt="" class="opening-left absolute -left-6">
+				<img src="img/this/opening-right.png" alt="" class="opening-right absolute -right-6">
+			</div>
+				<!-- </div> -->
+
+			<div class="container bottom-0 left-1/2 max-w-2xl pb-8 md:pb-12">
+				<!-- SELECT -->
+				<div class="relative w-full px-4 md:px-0">
+					<span id="chapter-selection-arrow" class="absolute h-full right-10 md:right-5 flex items-center"><img src="img/dropdown-arrow.png" alt=""></span>
+					<select id="chapter-selection" class="bg-white border border-4 md:border-4 border-black text-lg md:text-xl rounded-2xl focus:ring-blue-500 focus:border-blue-500 block w-full p-3 md:p-4">
+						<option value="" disabled selected hidden class="text-red">Choix du chapitre</option>
+						<option value="title0">Introduction</option>
+						<option value="title1">Chapitre 1 : La souveraineté</option>
+						<option value="title2">Chapitre 2 : L'immigration</option>
+						<option value="title3">Chapitre 3 : La justice</option>
+						<option value="title4">Chapitre 4 : Les salaires</option>
+						<option value="title5">Chapitre 5 : La démocratie</option>
+					</select>
+				</div>
+						
+			</div>
+		</div> #}
+		
+		<div class="hero container flex max-w-screen-2xl relative">
+			<!-- <figure>
+				<img src="img/luisier-fontanet/jpeg/luisier-fontanet-8.jpg" alt="">
+			</figure> -->
+			<div class="gradient-linear absolute w-full h-full z-10"></div>
+			<div class="txtcontainer  container max-w-4xl absolute  z-10 left-1/2 -translate-x-1/2 bottom-8 md:bottom-16 translate-y-0">
+				<h1 class="font-semibold font-sans text-center text-white px-4 pb-2 md:pb-6">Au sommet du pouvoir, Nathalie Fontanet et&nbsp;Christelle&nbsp;Luisier se&nbsp;confient</h1>
+				<!-- <h2 class="w-full text-center text-white text-xl md:text-3xl">Le hockey<br>jusqu’à l’épuisement</h2> -->
+				<!-- {{ block('scroller') }} -->
+			</div>  
+			 
+			{# <div class="video-wrapper w-full relative" style="display:flex;justify-content:center;">    
+				<video preload="metadata" preload="auto" id="player1" playsinline autoplay muted class="" type="video/mp4">
+					<source src="https://player.vimeo.com/progressive_redirect/playback/807463297/rendition/720p/file.mp4?loc=external&signature=c095205781ec89930ee3b096785bb6b0be7c493294269451957baedbe55ce3ff" type="video/mp4"/>
+					Video not supported.
+				</video>
+			</div> #}
+		</div>
+
+		
+
+		<div class="container max-w-screen-2xl px-4 relative bg-white pb-12 md:pb-48">
+			<div class="chapeau container py-8 max-w-2xl">
+				<h2 class="text-xl md:text-2xl mt-2 md:mt-12">
+					Leaders des gouvernements vaudois et genevois, les PLR Christelle Luisier et Nathalie Fontanet se retrouvent à l'EPFL, fin mars, à l'invitation de Blick. Exercice du pouvoir, blessures, rires: complices, les deux politiciennes se livrent sans fard.
+				</h2>
+			</div>            
+			{{ block('authors') }}
+			<div class="container mt-8 mb-12 max-w-2xl">
+				<p class="lettrine text-lg font-light mb-6">
+					Les deux sont femmes, libérales-radicales. PLR. Les deux sont les locomotives des deux plus grands cantons romands, qui ont basculé à droite entre 2022 et 2023. Christelle Luisier Brodard est présidente du Conseil d’État vaudois jusqu’en 2027. Nathalie Fontanet prendra la tête du gouvernement genevois pour un an en juin. Les deux élues ont des sourires complices, se connaissent bien.
+				</p>
+
+				<p class="text-lg font-light mb-6">
+					Les «moi aussi» et les «je la rejoins» sont légion quand elles sont réunies, comme ici par Blick. Ce 28 mars, au Rolex Learning Center de l’Ecole polytechnique fédérale de Lausanne (EFPL), les deux politiciennes se livrent sur l’exercice du pouvoir, le succès, leur féminisme, rient, évoquent les blessures de leurs divorces et leurs petits secrets pour faire face dans les périodes difficiles. Interview intimiste et bon enfant.
+				</p>
+
+				<hr class="mt-8 md:mt-10 mb-8 md:mb-10">
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">Amit Juillard (AJ):</span> Vous nous racontez votre première rencontre?</span><br>
+					<span class="font-semibold underline decoration-2 nf">Nathalie Fontanet (NF):</span> On s’est rencontrées à mi-chemin entre Lausanne et Genève, je ne sais plus exactement où, lors de la précédente législature. On est allées manger ensemble. On s’est un peu livrées, retrouvées, comme les deux femmes PLR que nous sommes.
+				</p>
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> Ça a tout de suite cliqué entre vous?</span><br>
+					<span class="font-semibold underline decoration-2 clb">Christelle Luisier Brodard (CLB):</span> C’était vraiment très sympa. Et hyper informel, très détendu, avec beaucoup de sincérité. On a mis sur la table nos expériences personnelles plutôt que nos dossiers de conseillères d’État.
+				</p>
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> C’est-à-dire?</span><br>
+					<span class="font-semibold underline decoration-2 nf">NF:</span> On a parlé de notre vécu. Même si c’est intervenu à des âges différents, on a toutes les deux connu un divorce en étant mère. Et puis, on a chacune cette longue expérience au sein du parti, on a gagné nos galons, dans nos communes, au Grand Conseil.
+				</p>
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> C’est quoi qui vous a le plus touchée chez l’autre?</span><br>
+					<span class="font-semibold underline decoration-2 nf">NF:</span> J’avais été touchée par Christelle avant cette rencontre, quand je l’avais vue dans une émission «Mise au Point» de la RTS. Je t’ai vue avec ta fille (ndlr: elle a deux enfants), j’ai senti cet amour inconditionnel, que j’ai aussi pour mes trois filles, et ton émotion due à sa présence. Cela montrait une part de toi, tu te livrais. Je me suis identifiée.
+				</p>
+
+				<blockquote class="mt-12 mb-12 border-l-4 border-black pl-4 block">
+					<span class="text-2xl md:text-4xl font-semibold leading-normal bg-sky-50">« J’ai toujours eu la flamme de la politique et les choix que j'ai opérés ne sont probablement pas étrangers à la dégradation du couple»</span>
+					<span class="text-xl md:text-2xl mt-4 block text-left font-semibold">— Christelle Luisier Brodard</span>
+				</blockquote> 
+
+				<!-- <p class="text-2xl font-semibold italic mb-8">
+					«J’ai toujours eu la flamme de la politique et les choix que j'ai opérés ne sont probablement pas étrangers à la dégradation du couple.» Christelle Luisier Brodard
+				</p> -->
+			
+				<span class="block relative">
+
+					<p class="text-lg md:text-xl font-light mb-6 md:mb-8 w-full md:w-3/4">
+						<span class="font-semibold underline decoration-2 clb">CLB:</span> C’est vrai qu'on a eu des parcours de vie similaires, avec notamment un divorce. Il a fallu éduquer les enfants dans ces circonstances. Ce n'est pas un long fleuve tranquille, et c'est le cas pour de très nombreuses personnes, politiques ou non.
+					</p>
+
+					<p class="text-lg md:text-xl font-light mb-6 md:mb-8 w-full md:w-3/4">
+						<span class="font-semibold underline decoration-2 nf">NF:</span> Ce sont des blessures, en fait.
+					</p>
+
+					<figure class="relative mb-8 mx-auto md:-mx-36">
+						<img src="img/luisier-fontanet/jpeg/luisier-fontanet-14.jpg" alt="" class=""> 
+						<figcaption class="py-2 text-xs text-custom-color1">Nathalie Fontanet confie que divorcer a été l'une des plus grandes blessures de sa vie. <span class="opacity-50">–Valentin Flauraud</span></figcaption>
+					</figure>
+
+					<p class="text-lg md:text-xl font-light mb-12 w-full md:w-3/4">
+						<span class="font-semibold underline decoration-2 clb">CLB:</span> Effectivement, il y a des blessures. Personne ne peut prétendre être parfaite tant dans la vie politique que familiale ou professionnelle…
+					</p>
+
+					<!-- <div class="elem-container relative md:absolute  w-full md:w-6/12 xl:w-8/12 top-1/2 md:-translate-y-1/2  md:-right-52 xl:-right-96 mb-8">
+						<figure class="relative shadow-custom  md:w-full">
+							<img src="img/luisier-fontanet/jpeg/nf.jpg" alt="" class=""> 
+							<div class="vignette opacity-50 absolute top-1.5 bottom-1.5"></div>
+						</figure>
+						<figcaption class="py-2 text-xs text-custom-color1">Nathalie Fontanet <span class="opacity-50">–Valentin Flauraud</span></figcaption>
+					</div> -->
+
+					<p class="text-lg md:text-xl font-light mb-6 md:mb-8 w-full md:w-3/4">
+						<span class="font-semibold inline-block mb-8 w-3/4"><span class="aj">AJ:</span> Votre plus grande blessure, c’est donc le divorce?</span><br>
+						<span class="font-semibold underline decoration-2 nf">NF:</span> J’ai 59 ans et mon chemin n’a pas toujours été linéaire. Le divorce a été l'une des plus grosses blessures de ma vie. Je croyais très fort à la famille, ce n’est pas le chemin que je m'étais imaginé. Mais après, il y a aussi eu des choses formidables.
+					</p>
+
+					<p class="text-lg md:text-xl font-light mb-6 md:mb-8 w-full md:w-3/4">
+						<span class="font-semibold inline-block mb-8 w-3/4"><span class="aj">AJ:</span> Et pour vous, Christelle Luisier Brodard?</span><br>
+						<span class="font-semibold underline decoration-2 clb">CLB:</span> Le divorce, c’est assurément une blessure. J’ai toujours eu la flamme de la politique et les choix que j'ai opérés ne sont probablement pas étrangers à la dégradation du couple. Je suis passionnée et j'espère être un exemple pour mes enfants, qui ont une maman engagée, avec des convictions et qui se bat pour celles-ci.
+					</p>
+
+				</span>
+
+				<blockquote class="mt-12 mb-12 border-l-4 border-black pl-4 block">
+					<span class="text-2xl md:text-4xl font-semibold leading-normal bg-pink-50">« Si on s’interrogeait aussi souvent sur les compétences des hommes que sur celles des femmes, je ne suis pas sûre qu’on arriverait à la conclusion que les hommes sont largement aussi compétents que les femmes»</span>
+					<span class="text-xl md:text-2xl mt-4 block text-left font-semibold">— Nathalie Fontanet</span>
+				</blockquote> 
+
+				<!-- <p class="text-2xl font-semibold italic mb-8">
+					«Si on s’interrogeait aussi souvent sur les compétences des hommes que sur celles des femmes, je ne suis pas sûre qu’on arriverait à la conclusion que les hommes sont largement aussi compétents que les femmes (rire)!» Nathalie Fontanet
+				</p> -->
+
+				<span class="block relative">
+
+					<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+						<span class="font-semibold underline decoration-2 nf">NF:</span> En fait, cet interview est une psychothérapie. <i>(Rire généralisé)</i>
+					</p>
+
+					<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+						<span class="font-semibold underline decoration-2 clb">CLB:</span> Oui, je crois qu’il faut qu’on sorte de ça parce qu’en fait je vais parfaitement bien <i>(rire)</i>!
+					</p>
+
+					<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+						<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> Juste encore un point psychothérapie. Vous travaillez énormément, quel est l’impact de votre fonction sur votre vie privée?</span><br>
+						<span class="font-semibold underline decoration-2 nf">NF:</span> La politique, c’est ma vie, ma passion! Je n’ai pas tous les week-ends de libres, je ne suis pas disponible la semaine quand une de mes filles ne peut pas aller chercher un de ses enfants. C'est parfois difficile, mais ce n’est pas un sacrifice. Parce que c’est la vie que j’ai choisie. C’est un choix que mes enfants et mes petits-enfants comprennent et acceptent, comme mes parents. Mais, heureusement, je fais le plein de jeux et de bêtises avec mes petits-enfants dès que j'ai un moment de libre!
+					</p>
+
+					<p class="text-lg md:text-xl font-light mb-12">
+						<span class="font-semibold underline decoration-2 clb">CLB:</span> J’aime tout simplement et énormément ce que je fais. Et la politique, c’est un engagement total. Votre vie sociale se confond avec votre vie professionnelle. Il faut toutefois savoir garder des moments pour les amis et la famille. J’ai aussi besoin de moments où je suis vraiment seule.
+					</p>
+
+					<figure class="relative mb-8 mx-auto md:-mx-36">
+						<div class="relative shadow-custom">
+							<img src="img/luisier-fontanet/jpeg/luisier-fontanet-4r.jpg" alt="" class=""> 
+							<div class="vignette opacity-50 absolute w-full h-full top-0"></div>
+						</div>
+						<figcaption class="py-2 text-custom-color1 font-light text-xs">Au début de sa carrière, Christelle Luisier Brodard estime qu'elle a dû faire ses preuves parce que jeune, mais aussi parce que femme. <span class="opacity-50">–Valentin Flauraud</span></figcaption>
+					</figure>
+
+					<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+						<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> Ça ne vous dérange pas que, moi, journaliste, homme, je vous demande à vous, femmes, comment vous conciliez votre vie politique et votre vie de mère?</span><br>
+						<span class="font-semibold underline decoration-2 nf">NF:</span> J’imagine que vous auriez posé les mêmes questions à un homme dans les mêmes circonstances, non?
+					</p>
+
+					<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+						<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> Je l’aurais fait, oui.</span><br>
+						<span class="font-semibold underline decoration-2 clb">CLB:</span> Vous, vous l’auriez fait. Mais des journalistes qui posent aussi ces questions à des jeunes papas engagés en politique, c’est rare. Alors qu’à moi, on me la pose tout le temps. Donc quand on me dit que c’est super que le Conseil d’État vaudois compte cinq femmes sur sept membres, je réponds que le mentionner, c’est démontrer que c’est encore considéré comme anormal et qu’il y a du travail.
+					</p>
+
+					<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+						<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> C’est quoi la pire question qu’un ou une journaliste vous ait posée?</span><br>
+						<span class="font-semibold underline decoration-2 nf">NF:</span> C’était plutôt des remarques que des questions. Et pas forcément de journalistes. On me demandait si, en tant que femme, j’allais pouvoir gérer les finances. Si on s’interrogeait aussi souvent sur les compétences des hommes que sur celles des femmes, je ne suis pas sûre qu’on arriverait à la conclusion que les hommes sont largement aussi compétents que les femmes <i>(rire)</i>! Désolée, c’est mon côté parfois archi-féministe.
+					</p>
+
+					<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+						<span class="font-semibold underline decoration-2 clb">CLB:</span> On m’a demandé si mes enfants ne me reprochaient pas ma vie politique et s’ils n’allaient pas m’en vouloir, arrivés à l’âge adulte. C’est pénible.
+					</p>
+
+				</span>
+
+				<blockquote class="mt-12 mb-12 border-l-4 border-black pl-4 block">
+					<span class="text-2xl md:text-4xl font-semibold leading-normal bg-sky-50">« On doit travailler avec les hommes et pas contre les hommes»</span>
+					<span class="text-xl md:text-2xl mt-4 block text-left font-semibold">— Christelle Luisier Brodard</span>
+				</blockquote> 
+
+				<!-- <p class="text-2xl font-semibold italic mb-8">
+					«On doit travailler avec les hommes et pas contre les hommes.» Christelle Luisier Brodard
+				</p> -->
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> Quelles sont les difficultés qu’on rencontre en tant que femme, en politique?</span><br>
+					<span class="font-semibold underline decoration-2 clb">CLB:</span> J’aimerais d’abord dire que j’ai toujours eu l’impression d’être soutenue par mon parti. Je ne dis pas qu’il n’y a pas eu des membres du parti qui m’ont fait des remarques à titre individuel, mais en termes institutionnels, je me suis toujours sentie soutenue. Mais j’ai quand même toujours dû faire mes preuves, parce que j’étais jeune, mais aussi parce que j’étais femme.
+				</p>
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold underline decoration-2 nf">NF:</span> Je peux aussi dire que j’ai toujours eu le soutien de mon parti. Je suis entrée en politique en 2003, j’avais 38 ans. J’ai été élue pour la première fois après une très chouette campagne. Mais quand j’ai commencé à siéger, les anciens m’ont dit: «Écoute, t’es gentille, la campagne, c’était super, mais maintenant tu vas te taire pendant deux ans et tu vas apprendre, le reste viendra petit à petit!»
+				</p>
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> C’est évidemment ce que vous avez fait!</span><br>
+					<span class="font-semibold underline decoration-2 nf">NF:</span> Je leur ai répondu qu’ils pouvaient compter sur moi pour ne pas me taire <i>(rire)</i>! Et que j’avais la même légitimité qu’eux, mais que j’étais prête à apprendre aussi. Comme Christelle, je n’avais absolument aucun plan de carrière.
+				</p>
+
+				<p class="text-lg md:text-xl font-light mb-12">
+					
+					<span class="font-semibold underline decoration-2 clb">CLB:</span> En fait, je ne me suis jamais démandée si j’étais là parce que j’étais femme, jeune ou autre chose. J’ai toujours foncé.
+				</p>
+
+				<figure class="relative mb-8 mx-auto md:-mx-36">
+					<div class="pt-4 grid gap-4 md:grid-cols-2">
+						<div class="">
+							<img src="img/this/nf-enfant.jpg" alt="Les cahiers de sébastien, sous l'emprise de la drogue">
+							<!-- <figcaption class="py-2 text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dignissimos nobis, reprehenderit ex sint nostrum laboriosam provident voluptate id et rem saepe quia praesentium libero sapiente? Ratione excepturi est culpa.</figcaption> -->
+						</div>
+						<div class="">
+							<img src="img/this/clb-enfant.jpg" alt="Les cahiers de sébastien, sous l'emprise de la drogue">
+							<!-- <figcaption class="py-2 text-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dignissimos nobis, reprehenderit ex sint nostrum laboriosam provident voluptate id et rem saepe quia praesentium libero sapiente? Ratione excepturi est culpa.</figcaption> -->
+						</div>
+					</div>
+					<figcaption class="py-2 text-xs mb-6">Les deux conseillères d’État enfants. En jaune, Nathalie Fontanet et en rouge, Christelle Luisier  <span class="opacity-50">–Photos fournies par chacune</span></figcaption>
+				</figure>
+
+				<!-- <figure class="relative mb-8 mx-auto md:-mx-36">
+						<img src="img/placeholder.png" alt="" class=""> 
+						<figcaption class="py-2 text-custom-color1 font-light text-xs">Christelle Luisier Brodard <span class="opacity-50">–Keystone</span></figcaption>
+				</figure> -->
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> Parlons des remarques sexistes, misogynes, qu’on peut recevoir lorsqu’on est politicienne.</span><br>
+					<span class="font-semibold underline decoration-2 nf">NF:</span> Il faut déjà faire une différence entre #MeToo, donc le harcèlement et les comportements inadéquats, d’un côté, et, de l’autre, une espèce de sexisme ordinaire. C’est probablement lié à mon âge, mais je n’ai jamais estimé avoir été victime d’un comportement déplacé ou de harcèlement sexuel. Pour ce qui est des propos, je ne les ai, à titre personel, pas rencontrés en politique. Dans le cadre de mon mandat, la lutte contre le harcèlement sexuel et les propos et comportements déplacés, en particulier sur le lieu de travail, fait partie de mes priorités, étant en charge du bureau de promotion de l'égalité et de lutte contre les violences domestiques.
+				</p>
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold underline decoration-2 clb">CLB:</span> Je pense que #MeToo a été une libération de la parole très importante et a permis de mettre en exergue les cas de harcèlement. Évidemment qu’on doit combattre le sexisme, mais il faut veiller à ne pas stigmatiser un genre. On doit travailler avec les hommes et pas contre les hommes.
+				</p>
+
+				<blockquote class="mt-12 mb-12 border-l-4 border-black pl-4 block">
+					<span class="text-2xl md:text-4xl font-semibold leading-normal bg-sky-50">« La personne qui dit que les critiques ne lui font rien ment»</span>
+					<span class="text-xl md:text-2xl mt-4 block text-left font-semibold">— Christelle Luisier Brodard</span>
+				</blockquote>
+
+				<!-- <p class="text-2xl font-semibold italic mb-8">
+					«La personne qui dit que les critiques ne lui font rien ment.» Christelle Luisier Brodard
+				</p> -->
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> Y a-t-il une différence entre un homme PLR et une femme PLR?</span><br>
+					<span class="font-semibold underline decoration-2 clb">CLB:</span> C’est une fausse question, ça. Il ne faut pas s'attarder sur nos éventuelles différences. Entre les hommes et les femmes PLR, il y a un socle commun de valeurs, sur lesquelles ce parti a été construit. C’est un attachement aux institutions, à la liberté, à la responsabilité, à la solidarité, à un État solide mais subsidiaire.
+				</p>
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> Je vais continuer sur ces questions de masculin/féminin, si vous permettez.</span><br>
+					<span class="font-semibold underline decoration-2 clb">CLB:</span> <i>(Rire)</i> Vous allez nous dire que 98% de vos questions tournent autour de ça?
+				</p>
+
+				<figure class="relative mb-8 mx-auto md:-mx-36">
+					<img src="img/luisier-fontanet/jpeg/luisier-fontanet-15.jpg" alt="" class=""> 
+					<figcaption class="py-2 text-custom-color1 font-light text-xs">
+						Christelle Luisier Brodard souligne qu'en politique, nous ne sommes pas «au pays des Bisounours». <span class="opacity-50">–Valentin Flauraud</span></figcaption>
+				</figure>
+
+				<p class="text-lg md:text-xl font-light mb-12">
+					<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> C’était le thème annoncé de cette interview: femmes et pouvoir… Quand on est une femme en politique, on prend peut-être parfois plus de coups parce qu’on est femme. Est-ce que ça vous rend meilleures que les hommes?</span><br>
+					<span class="font-semibold underline decoration-2 nf">NF:</span> Je n’ai pas pris plus de coups parce que je suis femme. Je m’oppose à cette façon de voir les choses.
+				</p>
+
+				
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold underline decoration-2 clb">CLB:</span> Je pense qu’on fait face à quelques remarques sexistes que les hommes ne doivent pas affronter. Mais, en politique, vous n’êtes pas au pays des Bisounours: les hommes prennent autant de coups que les femmes. C’est aussi lié à la fonction. Je préside le Conseil d’État, donc je suis forcément plus exposée. La personne qui dit que les critiques ne lui font rien ment. Mais ce qui serait faux, c’est de s’endurcir complètement. J’ai connu des gens qui ne se laissaient pas du tout atteindre. Mais leur détachement devenait tel, qu’ils perdaient tout lien avec la réalité, et leur humanité.
+				</p>
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold underline decoration-2 nf">NF:</span> On est toujours atteint, on est des êtres humains.
+				</p>
+
+				<blockquote class="mt-12 mb-12 border-l-4 border-black pl-4 block">
+					<span class="text-2xl md:text-4xl font-semibold leading-normal bg-pink-50">« Quand je suis très énervée, contrariée ou blessée par des remarques, je mange du chocolat. D'ailleurs, je le porte sur moi et je l'assume»</span>
+					<span class="text-xl md:text-2xl mt-4 block text-left font-semibold">— Nathalie Fontanet</span>
+				</blockquote>
+
+				<!-- <p class="text-2xl font-semibold italic mb-8">
+					«Quand je suis très énervée, contrariée ou blessée par des remarques, je mange du chocolat. D'ailleurs, je le porte sur moi et je l'assume.» Nathalie Fontanet
+				</p> -->
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> Ça vous est déjà arrivé de ne plus réussir à dormir?</span><br>
+					<span class="font-semibold underline decoration-2 nf">NF:</span> Ça a pu m’arriver, mais c’est toujours une histoire d’un jour ou deux. Puis après je respire, je prends un tout petit peu de distance. Ce qui ne veut pas dire que je ne ressens plus rien.
+				</p>
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> Vous avez un exemple?</span><br>
+					<span class="font-semibold underline decoration-2 nf">NF:</span> Ce qui me marque et peut m’empêcher de dormir, c’est l’injustice. Par exemple, lorsque des accusations sont portées à mon encontre et qu'elles me paraissent injustes. 
+				</p>
+
+				<figure class="relative mb-8 mx-auto md:-mx-36">
+					<div class="relative shadow-custom">
+						<img src="img/luisier-fontanet/jpeg/luisier-fontanet-11.jpg" alt="" class=""> 
+						<div class="vignette opacity-50 absolute w-full h-full top-0"></div>
+					</div>
+					<figcaption class="py-2 text-custom-color1 font-light text-xs">Christelle Luisier Brodard et Nathalie Fontanet se connaissent depuis quelques années et se sont tout de suite appréciées. <span class="opacity-50">–Valentin Flauraud</span></figcaption>
+				</figure>
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> Vous n’avez vraiment pas un exemple précis en tête?</span><br>
+					<span class="font-semibold underline decoration-2 nf">NF:</span> Non, je réfléchis… J’ai une immense faculté à oublier les choses négatives. Vraiment.
+				</p>
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> Qu’est-ce que vous faites concrètement quand vous êtes atteintes?
+					</span><br>
+					<span class="font-semibold underline decoration-2 clb">CLB:</span> Quand je me sens vraiment touchée par des remarques, je sais que c’est illusoire de réussir à combattre ce que je ressens. Donc je me dis: «Ok, ces 24 prochaines heures, ça va être comme ça, ça va t’atteindre, avoir un petit impact sur la vie de famille, tu seras peut-être moins joviale, sympathique et enthousiaste, mais c’est comme ça, il faut digérer. Et après, ce sera derrière.»
+				</p>
+
+				<p class="text-lg md:text-xl font-light mb-12">
+					<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> Nathalie Fontanet, vous avez un petit secret, un petit truc, qui vous aide à faire face?
+					</span><br>
+					<span class="font-semibold underline decoration-2 nf">NF:</span> Chacun a ses petites recettes…
+				</p>
+
+				<figure class="relative mb-8 mx-auto w-full">
+					<img src="img/luisier-fontanet/jpeg/nf-maudet.jpg" alt="" class=""> 
+					<figcaption class="py-2 text-custom-color1 font-light text-xs">Nous sommes en 2007: Nathalie Fontanet, à droite, Pierre Maudet et Anne Marie von Arx-Vernon, aujourd'hui décédée, incarnaient l'Entente bourgeoise et visaient le Conseil administratif (exécutif) de la Ville de Genève. <span class="opacity-50">–Keystone</span></figcaption>
+				</figure>
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> Pardon d’insister, mais quelle la vôtre, quand vous êtes blessée, fâchée?
+
+					</span><br>
+					<span class="font-semibold underline decoration-2 nf">NF:</span> Je mange du chocolat. Ce n'est pas très bon pour moi, c’est un peu une addiction. Mais quand je suis très énervée, contrariée ou blessée par des remarques, c’est mon refuge. D’ailleurs, je le porte sur moi et je l’assume. Au bureau, ils savent que c’est ma recette! Tout à coup, ils disent: «Il faut aller chercher du chocolat, il faut aller chercher du chocolat! Elle est tendue!» <i>(Éclat de rire général)</i> Et comme par magie, ça passe.
+				</p>
+
+				<blockquote class="mt-12 mb-12 border-l-4 border-black pl-4 block">
+					<span class="text-2xl md:text-4xl font-semibold leading-normal bg-pink-50">« Le jour où je suis devenue conseillère d’État, j’étais soudain sa meilleure amie. Il fallait que je vienne manger chez elle et qu’on passe au 'tu'»</span>
+					<span class="text-xl md:text-2xl mt-4 block text-left font-semibold">— Nathalie Fontanet</span>
+				</blockquote>
+
+				<!-- <p class="text-2xl font-semibold italic mb-8">
+					«Le jour où je suis devenue conseillère d’État, j’étais soudain sa meilleure amie. Il fallait que je vienne manger chez elle et qu’on passe au 'tu'.» Nathalie Fontanet
+				</p> -->
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> Une réponse tout en douceur. Vous voulez ajouter quelque chose, Christelle Luisier Brodard?</span><br>
+					<span class="font-semibold underline decoration-2 clb">CLB:</span> J’ai un tout petit cercle d’amis à Payerne, deux ou trois personnes que j’aime depuis toujours et qui n’ont rien à voir avec la politique. Quand ça ne va pas, je les appelle ou ils viennent à la maison et on partage un moment, et plutôt un choix de fromages que du chocolat. Ils m’aident à relativiser parce qu’ils ne sont pas dans le milieu. Quand je leur explique que c’était terrible, qu’on m’a dit ça, puis ça, … Ils me disent: «On ne sait même pas de quoi tu nous parles! Ça va aller, c’est pas si grave!» <i>(Rires partagés)</i> J’adore ce «ça va aller, Christelle».
+				</p>
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> Vous recevez aussi toutes les deux des louanges. C’est un moteur?	</span><br>
+					<span class="font-semibold underline decoration-2 nf">NF:</span> Il faut faire très attention: quand on est élue, on a plein de nouveaux amis. Je me souviens de ça: dans un immeuble pas loin d’où je vivais, il y avait une femme que je croisais souvent mais qui me disait à peine bonjour. Le jour où je suis devenue conseillère d’État, j’étais soudain sa meilleure amie. Il fallait que je vienne manger chez elle, qu’on passe au 'tu' et qu’elle me présente à tout son entourage.
+				</p>
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> Elle vous a vraiment invitée chez elle?</span><br>
+					<span class="font-semibold underline decoration-2 nf">NF:</span> Bien sûr. Alors qu’on ne se jetait pas un coup d’œil auparavant.
+				</p>
+
+				<p class="text-lg md:text-xl font-light mb-12">
+					<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> Il y a aussi la question de la grosse tête. Si on l’attrape, est-ce qu’on peut encore être une bonne conseillère d’État?</span><br>
+					<span class="font-semibold underline decoration-2 clb">CLB:</span> Si vous vous entourez d’une bande de courtisans, vous risquez de perdre pied avec la réalité. Ils ne vont que vous encenser et ne vont jamais critiquer vos décisions. Mon ancien conseiller personnel, je l’avais choisi parce que c’était un super sparring-partner.
+				</p>
+
+				<figure class="relative mb-8 w-full">
+					<img src="img/luisier-fontanet/jpeg/clb-labouchere.jpg" alt="" class=""> 
+					<figcaption class="py-2 text-custom-color1 font-light text-xs">Retour en 2010, à Lavey (VD). Christelle Luisier Brodard, à droite, ancienne présidente du Parti radical vaudois, aux côtés de Catherine Labouchère, ancienne présidente du Parti libéral vaudois, lors du premier congrès du Mouvement libéral-radical. Cette structure de transition porta les deux familles politiques jusqu'à la création de la section cantonale du Parti libéral-radical (PLR). <span class="opacity-50">–Keystone</span></figcaption>
+				</figure>
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold underline decoration-2 nf">NF:</span> Quand j'ai pris mes fonctions, il y avait deux places à repourvoir au secrétariat général, qui ont fait l’objet d’annonces publiques. Mais je n’ai de loin pas cherché à engager des PLR ou des gens qui pensent exactement comme moi. On doit s’entourer de gens qui pensent différemment, qui sont susceptibles de nous aider à garder les pieds sur Terre. Quand je vois ce qui a pu arriver à certaines personnalités politiques, je pense que si elles avaient pu avoir un autre entourage…
+				</p>
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> Vous pensez à qui?</span><br>
+					<span class="font-semibold underline decoration-2 nf">NF:</span> À personne. <i>(Elle sourit)</i> J’en ai déjà trop dit donc je change de sujet! C’est hyper important en politique d’avoir quelqu’un dans son entourage qui peut nous dire: «Attention!» Quand on fait partie d’un collège gouvernemental, on représente tout le monde: on est là pour défendre l’entier de la population.
+				</p>
+
+				<blockquote class="mt-12 mb-12 border-l-4 border-black pl-4 block">
+					<span class="text-2xl md:text-4xl font-semibold leading-normal bg-sky-50">« On sent une animation politique un peu plus forte à Genève que chez nous»</span>
+					<span class="text-xl md:text-2xl mt-4 block text-left font-semibold">— Christelle Luisier Brodard</span>
+				</blockquote>
+
+				<!-- <p class="text-2xl font-semibold italic mb-8">
+					«On sent une animation politique un peu plus forte à Genève que chez nous.» Christelle Luisier Brodard
+				</p> -->
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> C’est difficile de laisser son dogme politique un peu de côté?
+					</span><br>
+					<span class="font-semibold underline decoration-2 nf">NF:</span> Non. Tu trouves que c’est dur, toi?
+				</p>
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold underline decoration-2 clb">CLB:</span> Comme députée, j’avais la réputation d’être assez tranchante. Aujourd’hui, je suis très collégiale. Ce qui est dur, c’est cet affrontement au sein du collège, même s’il est normal. Mais tant qu’on peut mettre les choses sur la table… Ça permet ensuite de trouver un chemin parmi les avis contraires.
+				</p>
+
+				<p class="text-lg md:text-xl font-light mb-12">
+					<span class="font-semibold underline decoration-2 nf">NF:</span> Les gens qui ont la force d’exprimer leurs oppositions sont des personnalités qui sont capables de chercher une voie pour se rejoindre. C'est difficile de travailler avec des gens qui ne s’expriment pas franchement dans les discussions et qui vont ensuite se livrer à l’extérieur pour dire tout ce qu’ils pensent des épouvantables décisions prises par le collège dont ils font partie!
+				</p>
+
+				<figure class="mx-auto md:w-3/4 mx-auto mb-6 md:mb-12">
+					<img src="img/luisier-fontanet/jpeg/luisier-fontanet-3r.jpg" alt="" class=""> 
+					<figcaption class="py-2 text-custom-color1 font-light text-xs">Nathalie Fontanet estime qu'il y a une une plus forte animation politique dans le canton de Genève que dans le canton de Vaud. <span class="opacity-50">–Valentin Flauraud</span></figcaption>
+				</figure>
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> Ce cas de figure est plus courant à Genève que dans le canton de Vaud, non? Il y a plus de fuites.
+
+					</span><br>
+					<span class="font-semibold underline decoration-2 nf">NF:</span> Cela arrive, rarement heureusement. J’estime que ce n’est pas digne. A titre personnel, je parle à la presse de manière officielle. Vos collègues genevois le savent, ce n’est pas vers moi qu’ils viennent pour avoir des informations en off sur ce qui se passe au sein du gouvernement. Ceci dit, les éventuelles fuites ne proviennent pas forcément du Conseil d’État, il ne faut pas vous méprendre. Elles peuvent aussi venir de tiers à qui un ou une conseillère d’État en aurait raconté un peu trop.
+				</p>
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> Poursuivons sur ces différences entre Vaud et Genève. Christelle Luisier Brodard, comment voyez-vous la politique genevoise?
+
+
+					</span><br>
+					<span class="font-semibold underline decoration-2 clb">CLB:</span> Je constate d’abord que la collaboration fonctionne entre nos deux cantons, que le pôle lémanique est dynamique. La seule grosse différence que je vois entre les deux cantons, c’est qu’on sent une animation politique un peu plus forte à Genève que chez nous. Chez nous, l’animation s’exprime avec le caractère vaudois, on va dire.
+				</p>
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> Ça veut dire quoi?
+
+
+					</span><br>
+					<span class="font-semibold underline decoration-2 clb">CLB:</span> Les débats parlementaires sont moins vifs, mais ça ne veut pas dire que c’est plus simple pour nous de faire passer nos dossiers. Le style est différent.
+
+
+				</p>
+
+				<blockquote class="mt-12 mb-12 border-l-4 border-black pl-4 block">
+					<span class="text-2xl md:text-4xl font-semibold leading-normal bg-pink-50">« Je terminerai cette législature en 2028, à 63 ans. Je ne sais pas ce que je ferai après. »</span>
+					<span class="text-xl md:text-2xl mt-4 block text-left font-semibold">— Nathalie Fontanet</span>
+				</blockquote>
+
+				<!-- <p class="text-2xl font-semibold italic mb-8">
+					«Je terminerai cette législature en 2028, à 63 ans. Je ne sais pas ce que je ferai après.» Nathalie Fontanet
+				</p> -->
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> Et à l’inverse?
+					</span><br>
+					<span class="font-semibold underline decoration-2 nf">NF:</span> Nous, on est un peu plus international, avec un côté plus urbain. Chez les Vaudois, il y a un côté plus terrien, avec un côté a priori plus pragmatique. Alors que le Genevois s’enflamme un peu. Mais je dois dire que j’étais très soulagée mais aussi désolée pour ma collègue quand j’ai vu que la fonction publique faisait aussi grève dans le canton de Vaud…
+
+
+				</p>
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> Ma dernière question porte sur l’avenir. Est-ce qu’on va un jour vous voir, complices comme aujourd’hui, sous la Coupole fédérale, au Parlement ou au sein de Conseil fédéral?
+					</span><br>
+					<span class="font-semibold underline decoration-2 nf">NF:</span> Je n’ai jamais eu de plan de carrière. Je suis vraiment très heureuse dans ma fonction. Je terminerai cette législature en 2028, à 63 ans. Je ne sais pas ce que je ferai après. Après 10 ans de Conseil d’État, je ne sais pas si je vais souhaiter poursuivre mon engagement politique.
+
+
+				</p>
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold underline decoration-2 clb">CLB:</span> Ça fait quatre ans que je suis au Conseil d’État et je m’éclate dans ce que je fais. J’ai envie que ça dure. Ce qu’on peut me souhaiter, c’est la santé et beaucoup de bonheur et de joie au quotidien. Et de rire! On peut faire les choses sérieusement, mais sans se prendre top au sérieux!
+
+
+				</p>
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold underline decoration-2 nf">NF:</span> Je m’associe entièrement aux derniers mots de Christelle! Être heureuse, avoir la santé. Et puis, le rire, l’humour, ça nous permet aussi d’avancer.
+				</p>
+
+				<p class="text-lg md:text-xl font-light mb-6 md:mb-8">
+					<span class="font-semibold underline decoration-2 clb">CLB:</span> Oui, et c’est aussi une soupape. Bon… Ça vous convient?
+				</p>
+
+				<p class="text-lg md:text-xl font-light mb-12 md:mb-20">
+					<span class="font-semibold inline-block mb-6 md:mb-8"><span class="aj">AJ:</span> Et à vous?
+					</span><br>
+					<span class="font-semibold underline decoration-2 nf">NF:</span> Oui, très bien, on a fini la psychothérapie!
+				</p>
+
+
+				<figure class="relative mb-8 w-full">
+					<img src="img/luisier-fontanet/jpeg/nf-clb-reflets.jpg" alt="" class=""> 
+					<figcaption class="py-2 text-custom-color1 font-light text-xs">Pour Nathalie Fontanet et Christelle Luisier, si le bonheur et la santé sont là, le reste suit. <span class="opacity-50">–Valentin Flauraud</span></figcaption>
+				</figure>
+
+
+
+
+
+
+
+
+
+
+
+				
+
+			</div>
+		</div>
+		
+		
+
+		
+		
+
+		
+
+		
+
+		<footer class="container py-8 max-w-full relative">   
+			<div class="w-80 top-1/2 left-1/2 -translate-x-2/4 -translate-y-2/4 absolute">
+				{{ block('credits') }}  
+			</div>
+		</footer> 
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		
+		{# <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script> #}
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.3.3/dist/jBox.all.min.js"></script>
+		<script src="js/counter-up.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+		<!-- <script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script> -->
+		
+		<!-- <script src="js/yt.js"></script> --> 
+		<script src="js/vendor/modernizr-3.11.2.min.js"></script> 
+		<!-- <script src="js/plugins.js"></script> -->
+		<script src="js/header.js"></script>
+		<!-- <script src="js/charts.js"></script> -->
+		<script src="js/main.js"></script>
+		{# <script src="js/intro.js"></script> #}
+		<!-- <script src="js/headroom.min.js"></script> -->
+		
+
+	</div>
+	</body>
+</html>
